@@ -1,0 +1,14 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+//for accessibility 
+article a {
+	text-decoration: underline;
+}
+
+//nav bar
+.navbar-dark .navbar-nav .nav-link {
+	color: rgba(255,255,255,1);
+}
+
+.nav-item.active a {
+	text-decoration: underline;
+}
