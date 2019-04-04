@@ -51,3 +51,25 @@ if(!function_exists('load_vcu_brandbar_script')){
     }
 }
 add_action('wp_enqueue_scripts', 'load_vcu_brandbar_script');
+
+//ACF
+
+function get_learning_objectives(){
+	if( have_rows('learning_objectives') ):
+	$html = '<div class="col-md-6 learning-objectives"><h2>Learning Objectives</h2><ul>';
+ 	// loop through the rows of data
+    while ( have_rows('learning_objectives') ) : the_row();
+
+        // display a sub field value
+        $html .= '<li>' .get_sub_field('objective').'</li>';
+
+    endwhile;
+    $html .= '</ul></div>';
+    return $html;
+
+else :
+
+    // no rows found
+
+endif;
+}

@@ -21,7 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
-
+		<!--learnig objectives-->
+		<div class="row" id="learning-row">
+			<?php echo get_learning_objectives();?>
+		</div>
 		<?php the_content(); ?>
 
 		<?php
