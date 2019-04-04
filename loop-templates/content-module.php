@@ -21,8 +21,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
-		
-		<?php the_content(); ?>
+		<!--learning objectives-->
+		<div class="row" id="learning-row">
+			<?php echo get_learning_objectives();?>
+			<?php echo acf_fetch_introduction();?>
+		</div>
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<?php the_content(); ?>
+			</div>
+		</div>
 
 		<?php
 		wp_link_pages(

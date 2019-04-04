@@ -73,3 +73,20 @@ else :
 
 endif;
 }
+
+
+
+function acf_fetch_introduction(){
+  $html = '';
+  $introduction = get_field('introduction');
+
+    if( $introduction) {  
+      $html  = '<div class="col-md-6 module-intro"><h2>Introduction</h2>';   
+      $html .= $introduction;  
+      $html .= '</div>';
+     return $html;    
+    }
+
+}
+
+
