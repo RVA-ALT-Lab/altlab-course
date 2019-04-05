@@ -19,6 +19,11 @@ article a {
 	border: none;
 }
 
+.dropdown-menu li a{
+	width: 220px;
+	word-wrap: break-word;
+	white-space: normal; 
+}
 
 //module pages
 #learning-row {
