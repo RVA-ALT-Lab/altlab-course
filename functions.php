@@ -90,6 +90,21 @@ function acf_fetch_introduction(){
 }
 
 
+//from https://www.advancedcustomfields.com/resources/local-json/
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+ 
+function my_acf_json_save_point( $path ) {
+    
+    // update path
+    $path = get_stylesheet_directory() . '/acf-json';
+    
+    
+    // return
+    return $path;
+    
+}
+
+
 //LETS YOU CONTROL WHAT GETS STRIPPED IN CUT/PASTE TO MCE EDITOR 
 //fix cut paste drama from https://jonathannicol.com/blog/2015/02/19/clean-pasted-text-in-wordpress/
 add_filter('tiny_mce_before_init','configure_tinymce');
