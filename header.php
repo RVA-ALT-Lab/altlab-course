@@ -72,6 +72,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+				<button class="search-icon" type="button" data-toggle="collapse" data-target="#search-box-dropdown" aria-label="Toggle search bar" aria-controls="search-box-dropdown" aria-expanded="false" id="search-button">
+					<i class="fa fa-search" aria-hidden="true" id="header-search"></i>
+				</button>
+
+				<div class="collapse" id="search-box-dropdown"><?php get_search_form();?></div>	
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
