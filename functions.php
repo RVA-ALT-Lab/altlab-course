@@ -96,7 +96,7 @@ function acf_fetch_next_page(){
   $next_page = get_field('next_page');
 
     if( $next_page) {      
-      $html = '<a class="module-next-nav" href="' . $next_page . '">Next</a>';  
+      $html = '<a class="module-next-nav" href="' . $next_page . '">Next <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>';  
      return $html;    
     }
 
