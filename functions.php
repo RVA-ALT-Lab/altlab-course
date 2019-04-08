@@ -90,6 +90,22 @@ function acf_fetch_introduction(){
 }
 
 
+function acf_fetch_next_page(){
+  global $post;
+  $html = '';
+  $next_page = get_field('next_page');
+
+    if( $next_page) {      
+      $html = '<a class="module-next-nav" href="' . $next_page . '">Next</a>';  
+     return $html;    
+    }
+
+}
+
+
+
+
+
 //from https://www.advancedcustomfields.com/resources/local-json/
 add_filter('acf/settings/save_json', 'my_acf_json_save_point');
  

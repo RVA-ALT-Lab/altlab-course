@@ -29,6 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="row">
 			<div class="col-md-8 offset-md-2">
 				<?php the_content(); ?>
+				<?php echo acf_fetch_next_page(); ?>
 			</div>
 		</div>
 
