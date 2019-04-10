@@ -103,7 +103,25 @@ function acf_fetch_next_page(){
 }
 
 
+function get_extra_resources(){
+  if( have_rows('resource_list') ):
+  $html = '<div class="col-md-12 learning-objectives"><h2>Learn More</h2><ul>';
+  // loop through the rows of data
+    while ( have_rows('resource_list') ) : the_row();
 
+        // display a sub field value
+        $html .= '<li><a href="'.get_sub_field('resource_link').'"><h3>' .get_sub_field('resource_title').'</h3></a><p>'.get_sub_field('resource_description').'</p></li>';
+
+    endwhile;
+    $html .= '</ul></div>';
+    return $html;
+
+else :
+
+    // no rows found
+
+endif;
+}
 
 
 //from https://www.advancedcustomfields.com/resources/local-json/

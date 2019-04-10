@@ -32,6 +32,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php echo acf_fetch_next_page(); ?>
 			</div>
 		</div>
+		<div class="row">
+			<?php echo get_extra_resources();?>
+		</div>
 
 		<?php
 		wp_link_pages(
