@@ -52,7 +52,7 @@ a.nav-link, a.navbar-brand {
 }
 
 .module-intro {
-  padding: 10px 0px 10px 30px;
+  padding: 15px 0px 10px 30px;
 }
 
 .learning-objectives li {
@@ -89,7 +89,12 @@ a.module-next-nav:hover i {
 .extras-footer {
 	border-top: 12px solid $gold;
 	margin-top: 40px;
-	padding-top: 30px;
+	padding-top: 10px;
+}
+
+.extras-footer h2 {
+	margin-top: 0;
+	margin-bottom: 25px;
 }
 
 //video from https://developers.google.com/web/fundamentals/design-and-ui/media/video/size-videos-correctly?hl=en
