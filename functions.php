@@ -105,15 +105,14 @@ function acf_fetch_next_page(){
 
 function get_extra_resources(){
   if( have_rows('resource_list') ):
-  $html = '<div class="col-md-12 learning-objectives"><h2>Learn More</h2><ul>';
+  $html = '<div class="col-12"><h2>Learn More</h2></div>';
   // loop through the rows of data
     while ( have_rows('resource_list') ) : the_row();
 
         // display a sub field value
-        $html .= '<li><a href="'.get_sub_field('resource_link').'"><h3>' .get_sub_field('resource_title').'</h3></a><p>'.get_sub_field('resource_description').'</p></li>';
+        $html .= '<div class="col-md-4 extras"><a href="'.get_sub_field('resource_link').'"><h3>' .get_sub_field('resource_title').'</h3></a><p>'.get_sub_field('resource_description').'</p></div>';
 
-    endwhile;
-    $html .= '</ul></div>';
+    endwhile;  
     return $html;
 
 else :
