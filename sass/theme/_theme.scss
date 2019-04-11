@@ -20,6 +20,19 @@ article a {
 	background-color: $gold !important;
 }
 
+.navbar-gold:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 65px 65px 0 0;
+  border-color: #000 transparent transparent  transparent;
+}
+
+
 a.nav-link, a.navbar-brand {
 	color: #000 !important;
 }
