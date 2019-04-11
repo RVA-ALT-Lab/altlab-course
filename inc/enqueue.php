@@ -32,3 +32,24 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 } // endif function_exists( 'understrap_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
+
+
+if(!function_exists('load_vcu_brandbar_script')){
+    function load_vcu_brandbar_script() {
+        global $post;
+        $version= '1.0'; 
+        $in_footer = false;
+        wp_enqueue_script('vcu_brand', '//branding.vcu.edu/bar/academic/latest.js', null, $version, $in_footer);       
+    }
+}
+add_action('wp_enqueue_scripts', 'load_vcu_brandbar_script');
+
+if(!function_exists('load_main_course_script')){
+    function load_main_course_script() {      
+        $version= '1.0'; 
+        $in_footer = true;
+        wp_enqueue_script('bsExpandJs', get_template_directory_uri() . '/js/course.js', null, $version, $in_footer);
+    }
+}
+add_action('wp_enqueue_scripts', 'load_main_course_script');
+

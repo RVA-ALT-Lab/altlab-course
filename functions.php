@@ -38,20 +38,6 @@ foreach ( $understrap_includes as $file ) {
 
 //custom stuff
 
-if(!function_exists('load_vcu_brandbar_script')){
-    function load_vcu_brandbar_script() {
-        global $post;
-        $version= '1.0'; 
-        $in_footer = false;
-        wp_enqueue_script('bsExpandJs', '//branding.vcu.edu/bar/academic/latest.js', null, $version, $in_footer);
-        wp_localize_script('my-script', 'my_script_vars', array(
-                'postID' => $post->ID
-            )
-        );
-    }
-}
-add_action('wp_enqueue_scripts', 'load_vcu_brandbar_script');
-
 //ACF
 
 function get_learning_objectives(){
