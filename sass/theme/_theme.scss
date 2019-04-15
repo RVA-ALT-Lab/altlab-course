@@ -216,16 +216,22 @@ a.module-next-nav:hover i {
   background-color: red
 }
 
+.bubble-holder {
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+
+}
+
 .bubble {
-  display: inline-block;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 255, .7);
   border-radius: 60%;
   text-align: center;
   line-height: 30px;
+  align-self: center;
+  justify-self: center;
 }
-
 
 //full size video 
 
