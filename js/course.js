@@ -25,3 +25,26 @@ videos.forEach(function(video) {
       video.parentNode.insertBefore(wrapper, video); //insert wrapper      
       wrapper.appendChild(video); // move video into wrapper
 });
+
+//
+
+let scores = ['pos-one', 'pos-one', 'pos-three','neg-two','pos-one', 'pos-one', 'pos-three','neg-two', 'neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','pos-seven']
+
+if (document.getElementById('gform_wrapper_4'){
+  countThem(scores)
+}
+
+function countThem(scores){
+  //let bubbles = document.querySelectorAll('.bubble');//gets all the bubbles
+  //console.log(bubbles)
+  scores.forEach(function(score){
+    let bubble = document.getElementById(score);
+    console.log(bubble)
+    //el.getAttribute('data-foo'));
+    let count = parseInt(bubble.getAttribute('data-count'),10);
+    console.log(count);
+    count = count+1;
+    bubble.setAttribute('data-count', count);
+    bubble.setAttribute('style', 'border:' + (count*3.5) + 'px solid rgba(0, 0, 255, .7);');
+  })
+}
