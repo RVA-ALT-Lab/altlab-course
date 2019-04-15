@@ -151,3 +151,35 @@ function configure_tinymce($in) {
   }";
   return $in;
 }
+
+
+//step forward/backwards
+//id =4
+
+
+
+function gform_stepper($entry, $form){
+   $search_criteria = array(
+    'status'        => 'active',
+    // 'field_filters' => array(
+    //     'mode' => 'any',       
+    //     array(
+    //         'key'   => '6',
+    //         'value' => $id
+    //     )
+    // )
+);
+
+  $sorting         = array();
+  $paging          = array( 'offset' => 0, 'page_size' => 35 );
+  $total_count     = 0;
+
+  $entries = GFAPI::get_entries(4, $search_criteria, $sorting, $paging, $total_count );
+  $html = '';
+    foreach ($entries as $entry) {
+      var_dump($entry);
+    }
+}
+
+
+add_shortcode( 'steps', 'gform_stepper' );
