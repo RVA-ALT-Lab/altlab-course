@@ -26,15 +26,11 @@ videos.forEach(function(video) {
       wrapper.appendChild(video); // move video into wrapper
 });
 
-//
+//BUBBLE ZONE
 
 let scores = ['pos-one', 'pos-one', 'pos-three','neg-two','pos-one', 'pos-one', 'pos-three','neg-two', 'neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','pos-seven']
 
-if (document.getElementById('bubble-zone')){
-  console.log('loaded')
-  countThem(scores)
-}
-
+countThem(scores)
 function countThem(scores){
   //let bubbles = document.querySelectorAll('.bubble');//gets all the bubbles
   //console.log(bubbles)
@@ -46,6 +42,6 @@ function countThem(scores){
     console.log(count);
     count = count+1;
     bubble.setAttribute('data-count', count);
-    bubble.setAttribute('style', 'border-top:' + (count*1.5) + 'px solid rgba(0, 0, 255, .7);');
+    bubble.setAttribute('style', 'border-top:' + (count*3.5) + 'px solid rgba(0, 0, 255, .7);');
   })
 }
