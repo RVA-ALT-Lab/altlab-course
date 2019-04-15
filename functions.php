@@ -171,10 +171,11 @@ function gform_stepper($entry, $form){
 );
 
   $sorting         = array();
-  $paging          = array( 'offset' => 0, 'page_size' => 35 );
+  $paging          = array( 'offset' => 0, 'page_size' => 305 );
   $total_count     = 0;
 
   $entries = GFAPI::get_entries(4, $search_criteria, $sorting, $paging, $total_count );
+  var_dump($entries);
   $html = '';
     foreach ($entries as $entry) {
       var_dump($entry);
