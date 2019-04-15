@@ -216,6 +216,12 @@ a.module-next-nav:hover i {
   background-color: red
 }
 
+#gform_4 .gsurvey-likert-row-label{
+	font-weight: 500;
+    text-align: left;
+    padding-left: 8px;
+}
+
 .bubble-holder {
   display: grid;
   grid-template-columns: repeat(21, 1fr);
