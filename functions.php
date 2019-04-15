@@ -175,7 +175,7 @@ function gform_stepper($entry, $form){
   $total_count     = 0;
 
   $entries = GFAPI::get_entries(4, $search_criteria, $sorting, $paging, $total_count );
-  var_dump($entries);
+  print("<pre>".print_r($entries,true)."</pre>");
   $html = '';
     foreach ($entries as $entry) {
       var_dump($entry);
