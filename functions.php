@@ -184,3 +184,32 @@ function gform_stepper($entry, $form){
 
 
 add_shortcode( 'steps', 'gform_stepper' );
+
+function make_bubbles(){
+  return '<div class="bubble-holder">
+  <div class="bubble" id="neg-ten" data-count="0">-10</div>
+  <div class="bubble" id="neg-nine" data-count="0">-9</div>
+  <div class="bubble" id="neg-eight" data-count="0">-8</div>
+  <div class="bubble" id="neg-seven" data-count="0">-7</div>
+  <div class="bubble" id="neg-six" data-count="0">-6</div>
+  <div class="bubble" id="neg-five" data-count="0">-5</div>
+  <div class="bubble" id="neg-four" data-count="0">-4</div>
+  <div class="bubble" id="neg-three" data-count="0">-3</div>
+  <div class="bubble" id="neg-two" data-count="0">-2</div>
+  <div class="bubble" id="neg-one" data-count="0">-1</div>
+  <div class="bubble" id="zero" data-count="0">0</div>
+  <div class="bubble" id="pos-one" data-count="0">1</div>
+  <div class="bubble" id="pos-two" data-count="0">2</div> 
+  <div class="bubble" id="pos-three" data-count="0">3</div>
+  <div class="bubble" id="pos-four" data-count="0">4</div>  
+  <div class="bubble" id="pos-five" data-count="0">5</div>
+  <div class="bubble" id="pos-six" data-count="0">6</div>
+  <div class="bubble" id="pos-seven" data-count="0">7</div>
+  <div class="bubble" id="pos-eight" data-count="0">8</div>
+  <div class="bubble" id="pos-nine" data-count="0">9</div>
+  <div class="bubble" id="pos-ten" data-count="0">10</div>
+</div>';
+}
+
+add_shortcode( 'show_bubbles', 'make_bubbles' );
+
