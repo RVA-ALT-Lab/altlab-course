@@ -1,3 +1,4 @@
+//build index for logistics page
 console.log('loaded course js');
 if(document.getElementById('index')){
   let headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -13,3 +14,14 @@ if(document.getElementById('index')){
   indexHolder.innerHTML = indexHtml;
 
 }
+
+
+//full size video
+var videos = document.querySelectorAll('iframe[src^="https://www.youtube.com/"], iframe[src^="https://player.vimeo.com"], iframe[src^="https://www.youtube-nocookie.com/"]'); //get video iframes for regular youtube, privacy+ youtube, and vimeo
+
+videos.forEach(function(video) {
+      let wrapper = document.createElement('div'); //create wrapper 
+      wrapper.classList.add("video-responsive"); //give wrapper the class      
+      video.parentNode.insertBefore(wrapper, video); //insert wrapper      
+      wrapper.appendChild(video); // move video into wrapper
+});
