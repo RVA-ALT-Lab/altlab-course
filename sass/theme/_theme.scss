@@ -157,3 +157,23 @@ a.module-next-nav:hover i {
 	width: 100%;
 	height: 100%;
 }
+
+//survey assessments
+#assessment .gfield_label {
+	font-weight: 400;
+	font-size: 1.2em;
+	margin-top: 32px
+}
+
+#assessment .gsurvey-likert-choice-label {
+	font-weight: 400;
+}
+
+#gform_submit_button_3 {
+	margin: 10px auto;
+	display: block;
+	width: 200px;
+	padding: 5px;
+	background-color: #febe00;
+	font-weight: 600;
+}
