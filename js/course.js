@@ -30,7 +30,7 @@ videos.forEach(function(video) {
 
 let scores = ['pos-one', 'pos-one', 'pos-three','neg-two','pos-one', 'pos-one', 'pos-three','neg-two', 'neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','pos-seven']
 
-if (document.getElementById('gform_wrapper_4'){
+if (document.getElementById('bubble-zone'){
   countThem(scores)
 }
 

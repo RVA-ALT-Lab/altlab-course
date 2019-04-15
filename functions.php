@@ -186,7 +186,7 @@ function gform_stepper($entry, $form){
 add_shortcode( 'steps', 'gform_stepper' );
 
 function make_bubbles(){
-  return '<div class="bubble-holder">
+  return '<div class="bubble-holder" id="bubble-zone">
   <div class="bubble" id="neg-ten" data-count="0">-10</div>
   <div class="bubble" id="neg-nine" data-count="0">-9</div>
   <div class="bubble" id="neg-eight" data-count="0">-8</div>
