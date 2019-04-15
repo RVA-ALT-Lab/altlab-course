@@ -42,7 +42,7 @@ foreach ( $understrap_includes as $file ) {
 
 function get_learning_objectives(){
 	if( have_rows('learning_objectives') ):
-	$html = '<div class="col-md-6 learning-objectives"><h2>Learning Objectives</h2><ul>';
+	$html = '<div class="col-md-6"><div class="learning-objectives"><h2>Learning Objectives</h2><ul>';
  	// loop through the rows of data
     while ( have_rows('learning_objectives') ) : the_row();
 
@@ -50,7 +50,7 @@ function get_learning_objectives(){
         $html .= '<li>' .get_sub_field('objective').'</li>';
 
     endwhile;
-    $html .= '</ul></div>';
+    $html .= '</ul></div></div>';
     return $html;
 
 else :
