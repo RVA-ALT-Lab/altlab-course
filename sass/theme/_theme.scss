@@ -212,8 +212,8 @@ a.module-next-nav:hover i {
    cursor: pointer;
 }
 
-#gform_4 ul.gfield_radio li label:active {
-  background-color: red
+#gform_4 ul.gfield_radio li label:active, #gform_4 ul.gfield_radio li label:hover {
+  background-color: #00b3be;
 }
 
 #gform_4 .gsurvey-likert-row-label{
@@ -230,7 +230,6 @@ a.module-next-nav:hover i {
 
 .bubble {
   width: 30px;
-  height: 30px;
   border: 1px solid rgba(0, 0, 255, .7);
   text-align: center;
   line-height: 30px;
