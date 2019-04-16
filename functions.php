@@ -190,10 +190,8 @@ function gform_stepper($entry, $form){
         $pre = 'zero-';
       }
       array_push($total_scores,$pre . $entry['gsurvey_score']);
-      array_push($total_guesses, $entry[3]);
-      var_dump($entry[3]);
-      var_dump($total_guesses);
-      print("<pre>".print_r($total_guesses,true)."</pre>");
+      $guess = array_push($total_guesses, $entry[3]);
+      var_dump($guess);
     }    
       $gform_scores = array(          
            'scores' => $total_scores,
