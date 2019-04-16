@@ -185,7 +185,8 @@ function gform_stepper($entry, $form){
       }
       if (intval($entry['gsurvey_score'])<0){
         $pre = 'neg';
-      } else {
+      } 
+      if (intval($entry['gsurvey_score']) === 0) {
         $pre = 'zero-';
       }
       array_push($total_scores,$pre . $entry['gsurvey_score']);
