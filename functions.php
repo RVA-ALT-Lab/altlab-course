@@ -178,6 +178,7 @@ function gform_stepper($entry, $form){
   //print("<pre>".print_r($entries,true)."</pre>");
   $html = '';
   $total_scores = [];
+  $total_quesses = [];
     foreach ($entries as $entry) {
       if (intval($entry['gsurvey_score'])>0){
         $pre = 'pos-';
@@ -189,7 +190,9 @@ function gform_stepper($entry, $form){
         $pre = 'zero-';
       }
       array_push($total_scores,$pre . $entry['gsurvey_score']);
+      array_push($total_guesses,$entry['gsurvey_score']);
     }    
+    var_dump($entry);
       $gform_scores = array(          
            'scores' => $total_scores,
        );
