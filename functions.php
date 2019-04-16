@@ -175,11 +175,19 @@ function gform_stepper($entry, $form){
   $total_count     = 0;
 
   $entries = GFAPI::get_entries(4, $search_criteria, $sorting, $paging, $total_count );
-  print("<pre>".print_r($entries,true)."</pre>");
+  //print("<pre>".print_r($entries,true)."</pre>");
   $html = '';
   $total_scores = [];
     foreach ($entries as $entry) {
-      array_push($total_scores,$entry['gsurvey_score']);
+      if ($entry['gsurvey_score']>0){
+        $pre = 'pos-';
+      }
+      if ($entry['gsurvey_score']<0){
+        $pre = 'neg-';
+      } if else {
+        $pre = 'zero-';
+      }
+      array_push($total_scores,$pre . $entry['gsurvey_score']);
     }
     var_dump($total_scores);
 }
@@ -189,27 +197,27 @@ add_shortcode( 'steps', 'gform_stepper' );
 
 function make_bubbles(){
   return '<div class="bubble-holder" id="bubble-zone">
-  <div class="bubble" id="neg-ten" data-count="0">-10</div>
-  <div class="bubble" id="neg-nine" data-count="0">-9</div>
-  <div class="bubble" id="neg-eight" data-count="0">-8</div>
-  <div class="bubble" id="neg-seven" data-count="0">-7</div>
-  <div class="bubble" id="neg-six" data-count="0">-6</div>
-  <div class="bubble" id="neg-five" data-count="0">-5</div>
-  <div class="bubble" id="neg-four" data-count="0">-4</div>
-  <div class="bubble" id="neg-three" data-count="0">-3</div>
-  <div class="bubble" id="neg-two" data-count="0">-2</div>
-  <div class="bubble" id="neg-one" data-count="0">-1</div>
-  <div class="bubble" id="zero" data-count="0">0</div>
-  <div class="bubble" id="pos-one" data-count="0">1</div>
-  <div class="bubble" id="pos-two" data-count="0">2</div> 
-  <div class="bubble" id="pos-three" data-count="0">3</div>
-  <div class="bubble" id="pos-four" data-count="0">4</div>  
-  <div class="bubble" id="pos-five" data-count="0">5</div>
-  <div class="bubble" id="pos-six" data-count="0">6</div>
-  <div class="bubble" id="pos-seven" data-count="0">7</div>
-  <div class="bubble" id="pos-eight" data-count="0">8</div>
-  <div class="bubble" id="pos-nine" data-count="0">9</div>
-  <div class="bubble" id="pos-ten" data-count="0">10</div>
+  <div class="bubble" id="neg-10" data-count="0">-10</div>
+  <div class="bubble" id="neg-9" data-count="0">-9</div>
+  <div class="bubble" id="neg-8" data-count="0">-8</div>
+  <div class="bubble" id="neg-7" data-count="0">-7</div>
+  <div class="bubble" id="neg-6" data-count="0">-6</div>
+  <div class="bubble" id="neg-5" data-count="0">-5</div>
+  <div class="bubble" id="neg-4" data-count="0">-4</div>
+  <div class="bubble" id="neg-3" data-count="0">-3</div>
+  <div class="bubble" id="neg-2" data-count="0">-2</div>
+  <div class="bubble" id="neg-1" data-count="0">-1</div>
+  <div class="bubble" id="zero-0" data-count="0">0</div>
+  <div class="bubble" id="pos-1" data-count="0">1</div>
+  <div class="bubble" id="pos-2" data-count="0">2</div> 
+  <div class="bubble" id="pos-3" data-count="0">3</div>
+  <div class="bubble" id="pos-4" data-count="0">4</div>  
+  <div class="bubble" id="pos-5" data-count="0">5</div>
+  <div class="bubble" id="pos-6" data-count="0">6</div>
+  <div class="bubble" id="pos-7" data-count="0">7</div>
+  <div class="bubble" id="pos-8" data-count="0">8</div>
+  <div class="bubble" id="pos-9" data-count="0">9</div>
+  <div class="bubble" id="pos-10" data-count="0">10</div>
 </div>';
 }
 
