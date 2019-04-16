@@ -234,7 +234,7 @@ a.module-next-nav:hover i {
 
 .bubble {
   width: 30px;
-  border: 1px solid rgba(0, 0, 255, .7);
+  border: 1px solid #00b3be;
   text-align: center;
   line-height: 30px;
   margin-top: auto;
@@ -243,6 +243,26 @@ a.module-next-nav:hover i {
 
 #gform_4 .gsurvey-likert-choice-label {
 	width:100px;
+}
+
+
+.your-guess-text, .your-total-text {
+  font-size: 1.2em;
+  display: inline-block;
+  max-width: 400px;
+  min-width: 200px;
+  border: 2px solid #00b3be;
+  padding: 15px;
+  text-align:center;
+}
+
+#your-guess, #your-total {
+  display: block;
+  text-align: center;
+  font-size: 3em;
+  width:100%;  
+  margin-top: 10px;
+  border-top: 2px solid #00b3be;
 }
 
 //full size video 
