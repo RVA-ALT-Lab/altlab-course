@@ -189,9 +189,7 @@ function gform_stepper($entry, $form){
         $pre = 'zero-';
       }
       array_push($total_scores,$pre . $entry['gsurvey_score']);
-    }
-    var_dump($total_scores);
-    echo implode(",",$total_scores);
+    }    
       $gform_scores = array(          
            'scores' => $total_scores,
        );
