@@ -191,8 +191,8 @@ function gform_stepper($entry, $form){
       }
       array_push($total_scores,$pre . $entry['gsurvey_score']);
       array_push($total_guesses,$entry[3]);
-      print("<pre>".print_r($entry[3],true)."</pre>");
     }    
+    print("<pre>".print_r($total_guesses,true)."</pre>");
       $gform_scores = array(          
            'scores' => $total_scores,
        );
