@@ -29,7 +29,7 @@ videos.forEach(function(video) {
 //BUBBLE ZONE
 
 //let scores = ['pos-one', 'pos-one', 'pos-three','neg-two','pos-one', 'pos-one', 'pos-three','neg-two', 'neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','neg-ten','pos-seven']
-let scores = [gformScores.scores];
+let scores = gformScores.scores;
 countThem(scores)
 function countThem(scores){
   //let bubbles = document.querySelectorAll('.bubble');//gets all the bubbles
