@@ -190,14 +190,13 @@ function gform_stepper($entry, $form){
         $pre = 'zero-';
       }
       array_push($total_scores,$pre . $entry['gsurvey_score']);
-      array_push($total_guesses,$entry['gsurvey_score']);
+      array_push($total_guesses,$entry[3]);
     }    
-    var_dump($entry);
       $gform_scores = array(          
            'scores' => $total_scores,
        );
      wp_localize_script('main-course', 'gformScores', $gform_scores); //sends data to script as variable
-
+     var_dump($total_guesses);
 }
 
 
