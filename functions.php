@@ -178,6 +178,7 @@ function gform_stepper($entry, $form){
   //print("<pre>".print_r($entries,true)."</pre>");
   $html = '';
   $total_scores = [];
+  var_dump(intval($entry['gsurvey_score']));
     foreach ($entries as $entry) {
       if (intval($entry['gsurvey_score'])>0){
         $pre = 'pos-';
