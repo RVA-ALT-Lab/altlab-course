@@ -193,7 +193,7 @@ function gform_stepper($entry, $form){
     var_dump($total_scores);
     echo implode(",",$total_scores);
       $gform_scores = array(          
-           'scores' => implode(",",$total_scores),
+           'scores' => $total_scores,
        );
      wp_localize_script('main-course', 'gformScores', $gform_scores); //sends data to script as variable
 
