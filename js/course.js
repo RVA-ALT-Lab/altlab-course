@@ -42,6 +42,6 @@ function countThem(scores){
     console.log(count);
     count = count+1;
     bubble.setAttribute('data-count', count);
-    bubble.setAttribute('style', 'border-top:' + (Math.ceil(count*3.5)) + 'px solid #00b3be);');
+    bubble.setAttribute('style', 'border-top:' + (Math.ceil(count*3.5)) + 'px solid rgba(0, 179, 190,1);');
   })
 }
