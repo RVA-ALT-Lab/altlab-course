@@ -191,12 +191,12 @@ function gform_stepper($entry, $form){
       }
       array_push($total_scores,$pre . $entry['gsurvey_score']);
       array_push($total_guesses,$entry[3]);
+      print("<pre>".print_r($entry,true)."</pre>");
     }    
       $gform_scores = array(          
            'scores' => $total_scores,
        );
-     wp_localize_script('main-course', 'gformScores', $gform_scores); //sends data to script as variable
-     var_dump($entry);
+     wp_localize_script('main-course', 'gformScores', $gform_scores); //sends data to script as variable     
 }
 
 
