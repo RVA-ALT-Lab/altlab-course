@@ -179,10 +179,10 @@ function gform_stepper($entry, $form){
   $html = '';
   $total_scores = [];
     foreach ($entries as $entry) {
-      if ($entry['gsurvey_score']>0){
+      if ((int)$entry['gsurvey_score']>0){
         $pre = 'pos-';
       }
-      if ($entry['gsurvey_score']<0){
+      if ((int)$entry['gsurvey_score']<0){
         $pre = 'neg-';
       } else {
         $pre = 'zero-';
