@@ -196,7 +196,7 @@ function gform_stepper($entry, $form){
            'scores' => $total_scores,
        );
      wp_localize_script('main-course', 'gformScores', $gform_scores); //sends data to script as variable
-     var_dump($total_guesses);
+     var_dump($entry);
 }
 
 
