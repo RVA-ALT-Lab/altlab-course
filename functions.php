@@ -179,7 +179,6 @@ function gform_stepper($entry, $form){
   $html = '';
   $total_scores = [];
     foreach ($entries as $entry) {
-      var_dump(intval($entry['gsurvey_score']));
       if (intval($entry['gsurvey_score'])>0){
         $pre = 'pos-';
       }
@@ -192,7 +191,14 @@ function gform_stepper($entry, $form){
       array_push($total_scores,$pre . $entry['gsurvey_score']);
     }
     var_dump($total_scores);
+    echo implode(",",$total_scores);
+      $gform_scores = array(          
+           'scores' => implode(",",$total_scores),
+       );
+     wp_localize_script('main-course', 'gformScores', $gform_scores); //sends data to script as variable
+
 }
+
 
 
 add_shortcode( 'steps', 'gform_stepper' );

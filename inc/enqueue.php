@@ -48,7 +48,7 @@ if(!function_exists('load_main_course_script')){
     function load_main_course_script() {      
         $version= '1.0'; 
         $in_footer = true;
-        wp_enqueue_script('bsExpandJs', get_template_directory_uri() . '/js/course.js', null, $version, $in_footer);
+        wp_enqueue_script('main-course', get_template_directory_uri() . '/js/course.js', null, $version, $in_footer);
     }
 }
 add_action('wp_enqueue_scripts', 'load_main_course_script');
