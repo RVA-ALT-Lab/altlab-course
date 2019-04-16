@@ -177,9 +177,11 @@ function gform_stepper($entry, $form){
   $entries = GFAPI::get_entries(4, $search_criteria, $sorting, $paging, $total_count );
   print("<pre>".print_r($entries,true)."</pre>");
   $html = '';
+  $total_scores = [];
     foreach ($entries as $entry) {
-      var_dump($entry);
+      array_push($total_scores,$entry['gsurvey_score']);
     }
+    var_dump($total_scores);
 }
 
 
